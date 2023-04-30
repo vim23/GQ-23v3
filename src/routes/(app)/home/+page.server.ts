@@ -53,7 +53,7 @@ export const actions: Actions = {
         const serialDate = formatDateSerial(updateDate);
 
         const updateID = originalReport.update !== null && originalReport.update.length !== null
-            ? `U${originalReport.update.length + 1}${originalReport.catcode}${serialDate}`
+            ? `U${(originalReport.update as any).length + 1}${originalReport.catcode}${serialDate}`
             : `U1${originalReport.catcode}${serialDate}`;
 
 
